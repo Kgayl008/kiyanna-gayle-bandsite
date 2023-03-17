@@ -1,0 +1,19 @@
+@use "./global" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@font-face {
+    font-family: 'Avenir';
+    src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+}
+
+@mixin header{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+
+    @include tablet{
+        font-size: 60px;
+        line-height: 68px;
+    }
+}
