@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(assets/Font/AvenirNextLTPro-Regular.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +18,10 @@
   background-color: #323232;
 }
 .header__title {
-  font-family: "Avenir";
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: #FAFAFA;
-  text-align: center;
-  font-weight: 400;
-  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -35,7 +36,6 @@ ul.header__nav-list {
   font-family: "Avenir";
   padding-bottom: 1rem;
 }
-
 .nav-item--active {
   text-decoration: none;
   color: white;
@@ -69,11 +69,24 @@ ul.header__nav-list {
   padding-left: 1rem;
   line-height: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
 .hero__image {
   width: 100vw;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 .hero__cite {
   font-size: 0.875rem;
@@ -84,13 +97,30 @@ ul.header__nav-list {
   padding-right: 1rem;
   color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .hero__cite {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+}
 .hero__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   padding-left: 1rem;
+  padding-right: 1rem;
   text-align: left;
   color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .hero__quote {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .section {
@@ -103,7 +133,25 @@ ul.header__nav-list {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .section__about-title {
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 600;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__photo-gallery {
+    flex-wrap: wrap;
+  }
 }
 
 .photo-gallery {
@@ -112,6 +160,11 @@ ul.header__nav-list {
   padding-right: 1rem;
   display: flex;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    padding: 2.25rem;
+  }
 }
 
 .container__article {
@@ -123,11 +176,38 @@ ul.header__nav-list {
   font-weight: 400;
   color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .container__article {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-bottom: 36px;
+  }
+  .container__article .container__article-text {
+    padding-right: 2.25rem;
+  }
+}
 
 .container__article-title {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .container__article-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
 }
 
 .section__photo-gallery {

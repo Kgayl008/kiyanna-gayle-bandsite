@@ -1,3 +1,4 @@
+@use "../styles/partials/mixins" as *;
 @use "./partials/global" as *;
 
 .body {
@@ -7,13 +8,10 @@
 .header {
     background-color: #323232;
     &__title{
-        font-family: 'Avenir';
-        font-size: 1.5rem;
-        line-height: 2rem;
-        color: #FAFAFA;
-        text-align: center;
-        font-weight: 400;
-        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
     }
 }
 a{
@@ -26,6 +24,9 @@ ul.header__nav-list {
     list-style-type: none;
     font-family: 'Avenir';
     padding-bottom: 1rem;
+    @include tablet{
+        // display: reset;
+    }
 }
 .nav-item--active {
     text-decoration: none;
@@ -55,12 +56,21 @@ ul.header__nav-list {
         padding-top: 5.625rem;
         padding-left: 1rem;
         line-height: 2rem;
+        @include tablet{
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            font-weight: 700;
+        }
     }
     &__image{
         width: 100vw;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 1rem;
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
     }
     &__cite{
         font-size: .875rem;
@@ -70,14 +80,28 @@ ul.header__nav-list {
         padding-left: 1rem;
         padding-right: 1rem;
         color:#323232;
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            font-size: 1.125rem;
+            // not the same font-size on the study guide
+            line-height: 2rem;
+        }
     }
     &__quote{
         font-size: .875rem;
         line-height: 1.375rem;
         font-weight: 600;
         padding-left: 1rem;
+        padding-right: 1rem;
         text-align: left;
         color:#323232;
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
     }
 }
 .section {
@@ -89,7 +113,22 @@ ul.header__nav-list {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         padding-left: 1rem;
+        padding-right: 1rem;
         color:#323232;
+        @include tablet{
+            font-size: 36px;
+            line-height: 32px;
+            font-weight: 600;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
+            padding-left: 2.25rem;
+            padding-right: 2.25rem;
+        }
+    }
+}
+.container__photo-gallery{
+    @include tablet {
+        flex-wrap: wrap;
     }
 }
 .photo-gallery{
@@ -98,6 +137,9 @@ ul.header__nav-list {
     padding-right: 1rem;
     display: flex;
     margin-bottom: 1rem;
+    @include tablet {
+        padding: 2.25rem;
+    }
 }
 .container__article{
     padding-left: 1rem;
@@ -107,16 +149,38 @@ ul.header__nav-list {
     line-height: 1.125rem;
     font-weight: 400;
     color: #323232;
+    @include tablet{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        display: flex;
+        flex-direction: row;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        padding-bottom: 36px;
+        .container__article-text{
+            padding-right: 2.25rem;
+        }
+        //for tablet^ fix format
+    }
     }
 .container__article-title {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         font-weight: 500;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include tablet{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 600;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
         }
-
+    }
 .section__photo-gallery{
     background-color: #FAFAFA;
-    // display: flex;
 }
 .footer {
     &__container{
