@@ -4,7 +4,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
-// global?
 .header {
     background-color: #323232;
     &__title{
@@ -28,10 +27,18 @@ ul.header__nav-list {
     font-family: 'Avenir';
     padding-bottom: 1rem;
 }
-.nav-list {
+.nav-item--active {
     text-decoration: none;
     color: white;
     border-bottom: 4px solid white;
+    padding-bottom: 12px;
+}
+.nav-item {
+    text-decoration: none;
+    color: white;
+}
+.header__nav-item--active {
+    width: 50%;
 }
 .hero {
     background-image: url(../assets/Images/hero-bio.jpg);

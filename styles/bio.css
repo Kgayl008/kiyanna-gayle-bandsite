@@ -36,10 +36,20 @@ ul.header__nav-list {
   padding-bottom: 1rem;
 }
 
-.nav-list {
+.nav-item--active {
   text-decoration: none;
   color: white;
   border-bottom: 4px solid white;
+  padding-bottom: 12px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+}
+
+.header__nav-item--active {
+  width: 50%;
 }
 
 .hero {
