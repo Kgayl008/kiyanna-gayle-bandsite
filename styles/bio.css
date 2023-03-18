@@ -2,6 +2,14 @@
   font-family: "Avenir";
   src: url(assets/Font/AvenirNextLTPro-Regular.otf);
 }
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(assets/Font/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(assets/Font/AvenirNextLTPro-Demi.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -235,34 +243,34 @@
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.footer__title__contact-listgit {
+.footer__title__contact-list {
   display: flex;
   padding-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
 }
-.footer__socials {
+.footer__title__socials {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 1rem;
   color: #FAFAFA;
 }
-.footer__icons {
+.footer__title__icons {
   padding-right: 2rem;
 }
-.footer__contact {
+.footer__title__contact {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   padding-bottom: 1rem;
   color: #FAFAFA;
 }
-.footer__wordmark {
+.footer__title__wordmark {
   padding-top: 3.5rem;
   color: #FAFAFA;
   font-weight: 400;
 }
-.footer__wordmark-text {
+.footer__title__wordmark-text {
   font-size: 0.625rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -271,11 +279,10 @@
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__wordmark-text {
+  .footer__title__wordmark-text {
     font-size: 0.75rem;
   }
 }
-
-.footer__contact--bold {
+.footer .footer__contact--bold {
   font-weight: 500;
 }/*# sourceMappingURL=bio.css.map */

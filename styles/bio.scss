@@ -201,12 +201,11 @@
         color: #FAFAFA;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
-        &__contact-listgit{
-            display: flex;
-            padding-bottom: 1rem;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    &__contact-list{
+        display: flex;
+        padding-bottom: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &__socials{
         display: flex;
@@ -243,4 +242,4 @@
 }
 .footer__contact--bold{
     font-weight: 500;
-}
+}}
