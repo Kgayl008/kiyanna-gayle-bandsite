@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: "Avenir";
 }
+
 .header {
   background-color: #323232;
 }
@@ -41,20 +42,38 @@
   text-decoration: none;
   color: white;
   border-bottom: 4px solid white;
-  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
   width: 50%;
+  font-weight: 600;
 }
 
 .nav-item {
   text-decoration: none;
-  color: white;
+  color: #FAFAFA;
   width: 50%;
+}
+
+.hero__flower-image {
+  width: 100vw;
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero__heading {
   position: absolute;
   color: white;
   z-index: 100;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
 }
 
 .hero__image {
@@ -70,6 +89,12 @@
     padding-top: 1.125rem;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .hero__image {
+    padding-left: 15.625rem;
+    padding-right: 15.625rem;
+  }
+}
 
 .hero {
   position: relative;
@@ -79,11 +104,7 @@
   align-items: center;
   background: #323232;
 }
-.hero__flower-image {
-  width: 100vw;
-  opacity: 0.5;
-  object-fit: cover;
-}
+
 .hero__cite {
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -101,6 +122,7 @@
     line-height: 2rem;
   }
 }
+
 .hero__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -225,6 +247,20 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+.footer__wordmark {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__wordmark {
+    display: flex;
+  }
+}
 .footer__title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -234,23 +270,19 @@
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-.footer__title {
+  .footer__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
+    padding-top: 3rem;
+    padding-left: 1.25rem;
+    padding-bottom: 2.25rem;
   }
 }
-.footer__title__contact-list {
-  display: flex;
-  padding-bottom: 1rem;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.footer__socials {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 1rem;
-  color: #FAFAFA;
+@media screen and (min-width: 768px) {
+  .footer__title-section {
+    display: flex;
+  }
 }
 .footer__icons {
   padding-right: 2rem;
@@ -266,10 +298,16 @@
   .footer__contact {
     font-size: 0.875rem;
     line-height: 1.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .footer__logo {
   padding-top: 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
 }
 .footer__logo-text {
   font-size: 0.625rem;
@@ -282,9 +320,14 @@
 @media screen and (min-width: 768px) {
   .footer__logo-text {
     font-size: 0.75rem;
+    padding-left: 1.25rem;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .footer__section {
+    padding-left: 2.25rem;
+  }
+}
 .footer__contact-bold {
   font-weight: 600;
   font-size: 0.8125rem;
@@ -293,8 +336,53 @@
   color: #FAFAFA;
 }
 @media screen and (min-width: 768px) {
-.footer__contact-bold {
+  .footer__contact-bold {
     font-size: 0.875rem;
     line-height: 1.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__socials {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+  color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    padding-left: 2.25rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+.footer__contact-list {
+  display: flex;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .footer__contact-list {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .footer__contact-list {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__row {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.25rem;
   }
 }/*# sourceMappingURL=bio.css.map */
