@@ -16,12 +16,6 @@
   box-sizing: border-box;
   font-family: "Avenir";
 }
-
-.body {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .header {
   background-color: #323232;
 }
@@ -57,30 +51,12 @@
   width: 50%;
 }
 
-.hero__text {
-  display: flex;
-  align-items: center;
-  justify-content: start;
+.hero__heading {
+  position: absolute;
   color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding-top: 5.625rem;
-  padding-left: 1rem;
-  line-height: 2rem;
+  z-index: 100;
 }
-@media screen and (min-width: 768px) {
-  .hero__text {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    font-weight: 700;
-    padding-left: 2.25rem;
-  }
-}
-.hero__flower{
-  width: 100vw;
-  opacity: 0.5;
-  object-fit: cover;
-}
+
 .hero__image {
   width: 100vw;
   padding-left: 1rem;
@@ -93,6 +69,20 @@
     padding-right: 5rem;
     padding-top: 1.125rem;
   }
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  background: #323232;
+}
+.hero__flower-image {
+  width: 100vw;
+  opacity: 0.5;
+  object-fit: cover;
 }
 .hero__cite {
   font-size: 0.875rem;
@@ -244,7 +234,7 @@
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__title {
+.footer__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -303,7 +293,7 @@
   color: #FAFAFA;
 }
 @media screen and (min-width: 768px) {
-  .footer__contact-bold {
+.footer__contact-bold {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }

@@ -1,10 +1,6 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/global" as *;
 
-// .body {
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-// }
 .header {
     background-color: #323232;
     @include tablet{
@@ -47,8 +43,15 @@
 }
 .hero__heading{
     position: absolute;
-    color: white;
+    color: black;
     z-index: 100;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+        @include tablet{
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
 }
 .hero__image{
     width: 100vw;
@@ -145,7 +148,6 @@
     @include tablet {
         width: 31vw;
         padding: 12px;
-    
     }
 }
 .container__article{
