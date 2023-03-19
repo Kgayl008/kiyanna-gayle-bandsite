@@ -25,7 +25,7 @@
 .header {
   background-color: #323232;
 }
-.header__title {
+.header__logo {
   display: flex;
   justify-content: center;
   padding-top: 1.5rem;
@@ -57,17 +57,6 @@
   width: 50%;
 }
 
-.hero {
-  background-image: url(../assets/Images/hero-bio.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 30vh;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 60vh;
-  }
-}
 .hero__text {
   display: flex;
   align-items: center;
@@ -84,7 +73,13 @@
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    padding-left: 2.25rem;
   }
+}
+.hero__flower{
+  width: 100vw;
+  opacity: 0.5;
+  object-fit: cover;
 }
 .hero__image {
   width: 100vw;
@@ -138,6 +133,9 @@
 .section {
   background-color: white;
 }
+.section__about {
+  height: 70%;
+}
 .section__about-title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -150,13 +148,13 @@
 }
 @media screen and (min-width: 768px) {
   .section__about-title {
-    font-size: 36px;
-    line-height: 32px;
-    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     padding-top: 3rem;
     padding-bottom: 1.125rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+    font-weight: 700;
   }
 }
 
@@ -165,7 +163,9 @@
     flex-wrap: wrap;
     display: flex;
     padding-left: 24px;
+    padding-right: 24px;
     padding-bottom: 1.125rem;
+    justify-content: center;
   }
 }
 
@@ -178,7 +178,7 @@
 }
 @media screen and (min-width: 768px) {
   .photo-gallery {
-    width: 30vw;
+    width: 31vw;
     padding: 12px;
   }
 }
@@ -243,34 +243,45 @@
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
 .footer__title__contact-list {
   display: flex;
   padding-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
 }
-.footer__title__socials {
+.footer__socials {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 1rem;
   color: #FAFAFA;
 }
-.footer__title__icons {
+.footer__icons {
   padding-right: 2rem;
 }
-.footer__title__contact {
+.footer__contact {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   padding-bottom: 1rem;
   color: #FAFAFA;
 }
-.footer__title__wordmark {
-  padding-top: 3.5rem;
-  color: #FAFAFA;
-  font-weight: 400;
+@media screen and (min-width: 768px) {
+  .footer__contact {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
-.footer__title__wordmark-text {
+.footer__logo {
+  padding-top: 3.5rem;
+}
+.footer__logo-text {
   font-size: 0.625rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -279,10 +290,21 @@
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__title__wordmark-text {
+  .footer__logo-text {
     font-size: 0.75rem;
   }
 }
-.footer .footer__contact--bold {
-  font-weight: 500;
+
+.footer__contact-bold {
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding-bottom: 1rem;
+  color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .footer__contact-bold {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
