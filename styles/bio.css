@@ -115,21 +115,21 @@
   }
 }
 
-.hero__image {
+.section__about-image {
   width: 100vw;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .hero__image {
+  .section__about-image {
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 1.125rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
-  .hero__image {
+  .section__about-image {
     padding-left: 15.625rem;
     padding-right: 15.625rem;
   }
@@ -144,7 +144,7 @@
   background: #323232;
 }
 
-.hero__cite {
+.section__about-cite {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -154,7 +154,7 @@
   color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .hero__cite {
+  .section__about-cite {
     padding-left: 5rem;
     padding-right: 5rem;
     font-size: 1.125rem;
@@ -162,12 +162,12 @@
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
-  .hero__cite {
+  .section__about-cite {
     padding-left: 15.625rem;
   }
 }
 
-.hero__quote {
+.section__about-quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -177,7 +177,7 @@
   color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .hero__quote {
+  .section__about-quote {
     padding-left: 5rem;
     padding-right: 7rem;
     padding-top: 1.125rem;
@@ -186,7 +186,7 @@
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
-  .hero__quote {
+  .section__about-quote {
     padding-left: 15.625rem;
     padding-right: 32.1875rem;
   }
