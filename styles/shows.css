@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(assets/Font/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(assets/Font/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(assets/Font/AvenirNextLTPro-Demi.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir";
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    padding-left: 2.25rem;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-bottom: 2rem;
+    padding-right: 2.25rem;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.header__nav-anchor {
+  text-decoration: none;
+  color: #E1E1E1;
+}
+
+.header__nav-list-item {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-list-item {
+    padding-bottom: 2.25rem;
+    padding-top: 2rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+.header__nav-list-item:hover {
+  color: #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+  font-weight: 600;
+}
+
+.header__nav-list-item-active {
+  border-bottom: 4px white solid;
+  font-weight: 600;
+}/*# sourceMappingURL=shows.css.map */
