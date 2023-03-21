@@ -25,17 +25,17 @@
         }
     }
 }
-.new__header__nav{
+.header__nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
-.new__nav-anchor{
+.header__nav-anchor{
     text-decoration: none;
     color: #E1E1E1;
 }
-.new__nav-list-item{
+.header__nav-list-item{
     width: 50%;
     text-align: center;
     padding-bottom: 1rem;
@@ -46,12 +46,12 @@
         padding-right: 2.25rem;
     }
 }
-.new__nav-list-item:hover {
+.header__nav-list-item:hover {
     color: $color-primary-light;
     border-bottom: 4px solid $color-primary-light;
     font-weight: 600;
 }
-.new__nav-list-item-active{
+.header__nav-list-item-active{
     border-bottom: 4px white solid;
     font-weight: 600;
 }
