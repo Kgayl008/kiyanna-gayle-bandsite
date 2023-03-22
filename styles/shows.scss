@@ -2,3 +2,17 @@
 @use "../styles/partials/global" as *;
 @use "../styles/partials/variables" as *;
 
+.hero{
+    &__image{
+        width: 100vw;
+        opacity: 0.5;
+        object-fit: cover;
+    }
+    &__shows{
+    position: relative;
+    width: 100vw;
+    height: 30%;
+    background: $color-primary-dark;
+    }
+    
+}
