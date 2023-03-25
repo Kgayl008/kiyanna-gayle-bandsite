@@ -10,6 +10,11 @@ const showsArray = [
         location: "San Francisco, CA"
     },
     {
+        date: "Fri Oct 15 2021",
+        venue: "View Lounge",
+        location: "San Francisco, CA"
+    },
+    {
         date: "Sat Nov 06 2021",
         venue: "Hyatt Agency",
         location: "San Francisco, CA"
@@ -27,11 +32,6 @@ const showsArray = [
 ]
 const shows = document.querySelector("#shows__section");
 shows.classList.add("shows__section");
-const showsTitle = document.createElement('h1');
-showsTitle.innerText = "Shows";
-shows.appendChild(showsTitle);
-showsTitle.classList.add("shows__title");
-
 
 
 for (let i = 0; i < showsArray.length; i++){
@@ -42,6 +42,9 @@ for (let i = 0; i < showsArray.length; i++){
     const container = document.createElement("div");
     container.classList.add("container");
     shows.appendChild(container);
+    container.addEventListener("mousedown", () => {
+    container.classList.toggle("selected");
+});
 
     //heading date
     const dateContainer = document.createElement("div");
@@ -90,14 +93,14 @@ for (let i = 0; i < showsArray.length; i++){
     locationContainer.appendChild(locationContent);
     locationContent.classList.add("shows__location-content");
 
+    //create a div for the button
+    const buyButtonContainer = document.createElement("div");
+    container.appendChild(buyButtonContainer);
+
     const buyTicketButton = document.createElement("button");
     buyTicketButton.innerHTML = "BUY TICKETS";
-    container.appendChild(buyTicketButton);
+    buyButtonContainer.appendChild(buyTicketButton);
     buyTicketButton.classList.add("shows__button")
-
-    const divider = document.createElement("hr");
-    shows.appendChild(divider);
-    divider.classList.add("divider");
 }
 
 
