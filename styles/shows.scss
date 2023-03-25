@@ -12,7 +12,141 @@
     position: relative;
     width: 100vw;
     height: 30%;
-    background: $color-primary-dark;
+    background: $BandSite-Black;
     }
-    
+    &__text{
+        position: absolute;
+        color: #FFFFFF;
+        z-index: 100;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding-left: 1rem;
+        top: 0rem;
+        padding-top: 1.5rem;
+    }
+    &__title{
+        font-size: 1rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        padding-bottom: 1.5rem;
+        @include tablet{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 700;
+            padding-left: 2.25rem;
+            padding-top: 2.25rem;
+        }
+    }
+    &__heading{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding-right: 3.375rem;
+        padding-bottom: 1.5rem;
+        @include tablet{
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            font-weight: 700;
+            padding-bottom: 2.25rem;
+            padding-left: 2.25rem;
+            padding-right: 6.25rem;
+        }
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+    }
+    &__song{
+        padding-right: 1rem;
+        height: 5.9375rem;
+        padding-right: 1rem;
+        @include tablet{
+            width: 65vw;
+            padding-left: 2.25rem;
+        }
+    }
+}
+.divider{
+    border-bottom: $Mercury solid .0625rem;
+}
+.shows{
+    &__title{
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    }
+    &__date-title {
+        padding-left: 1rem;
+        color: $Mercury;
+        font-size: .875rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    &__venue-title{
+        padding-left: 1rem;
+        color: $Mercury;
+        font-size: .875rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    &__location-title{
+        padding-left: 1rem;
+        color: $Mercury;
+        font-size: .875rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    &__dates{
+        padding-left: 1rem;
+        font-weight: 600;
+        color: $BandSite-Black;
+    }
+    &__venue-content{
+        padding-left: 1rem;
+        color: $BandSite-Black;
+    }
+    &__location-content{
+        padding-left: 1rem;
+    }
+    &__button{
+        background-color: $BandSite-Black;
+        color: $White;
+        margin: 1rem;
+        width: 90vw;
+        height: 2.5rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        border-radius: .25rem;
+        font-size: .875rem;
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+    }
+}
+// .shows__section{
+//     @include tablet {
+//         display: flex;
+//         flex-direction: row;
+//     }
+// }
+
+.container__dates{
+    display: flex;
+    flex-direction: column;
+}
+.container__venue{
+    display: flex;
+    flex-direction: column;
+}
+.container__location{
+    display: flex;
+    flex-direction: column;
 }

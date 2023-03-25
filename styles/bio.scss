@@ -9,7 +9,7 @@
 }
 .hero__heading{
     position: absolute;
-    color: $color-primary-light;
+    color: $White;
     z-index: 100;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -43,7 +43,7 @@
     height: 30%;
     display: flex;
     align-items: center;
-    background: $color-primary-dark;
+    background: $BandSite-Black;
     }
 .section__about-cite{
         font-size: .875rem;
@@ -52,7 +52,7 @@
         padding-top: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        color: $color-primary-dark;
+        color: $BandSite-Black;
         @include tablet {
             padding-left: 5rem;
             padding-right: 5rem;
@@ -70,7 +70,7 @@
         padding-left: 1rem;
         padding-right: 1rem;
         text-align: left;
-        color: $color-primary-dark;
+        color: $BandSite-Black;
         @include tablet {
             padding-left: 5rem;
             padding-right: 7rem;
@@ -85,7 +85,7 @@
     }
 
 .section {
-    background-color: $color-primary-light;
+    background-color: $White;
     &__about{
         height: 70%;
     }
@@ -97,7 +97,7 @@
         padding-bottom: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        color: $color-primary-dark;
+        color: $BandSite-Black;
         @include tablet {
             font-size: 2.25rem;
             line-height: 2.75rem;
@@ -135,7 +135,7 @@
     padding-bottom: 1rem;
     @include tablet {
         width: 31vw;
-        padding: 12px;
+        padding: .75rem;
         @include desktop{
             width: 30vw;
         }
@@ -156,7 +156,7 @@
     font-size: .8125rem;
     line-height: 1.125rem;
     font-weight: 400;
-    color: $color-primary-dark;
+    color: $BandSite-Black;
     @include tablet{
         padding-left: 5rem;
         padding-right: 5rem;
@@ -189,5 +189,60 @@
         }
     }
 .section__photo-gallery{
-    background-color: $color-secondary-light;
+    background-color: $Alabaster;
 }
+.comment {
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: $BandSite-Black;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+    }
+    &__avatar {
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        object-fit: cover;
+        position: relative;
+        left: 1rem;
+    }
+    &__subtitle {
+        color: $Silver;
+        font-weight: 500;
+    }
+    &__section {
+        display: flex;
+    }
+    &__form {
+        width: 73%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__button {
+        background-color: $BandSite-Black;
+        color: $White;
+        height: 2.5rem;
+        border-radius: .25rem;
+    }
+    &__image {
+        width: 22%;
+    }
+}
+.avatar__container{
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: $Mercury;
+}
+.container__name-date{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+// .section__comments{
+//     // display: flex;
+// }
