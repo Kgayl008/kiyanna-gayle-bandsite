@@ -64,7 +64,7 @@
             </div>
         </article>
         <section class="section__photo-gallery">
-            <h2 class="section__about-title">Photo Gallery</h2>
+            <h2 class="section__photo-gallery-title">Photo Gallery</h2>
             <div class="container__photo-gallery">
                 <img src="./assets/Images/Photo-gallery-1.jpg" alt="Beaming and colorful lights with fog at the Bees Knees concert."
                     class="photo-gallery">
@@ -88,22 +88,28 @@
         </section>
         <section>
             <h2 class="comment__title">Join the Conversation</h2>
-            <section class="comment__section">
+            <section class="comment__container">
                 <div class="comment__image">
                     <img src="./assets/Images/Mohan-muruge.jpg" alt="" class="comment__avatar">
                 </div>
                 <form novalidate class="comment__form">
-                    <div>
-                        <label for="name" class="comment__subtitle">NAME</label>
+                    <div class="box__name">
+                        <label for="name" class="comment__subtitle" >NAME</label>
+                        <input type="text" name="name" placeholder="Enter your name" class="box__name-input" required>
                     </div>
-                    <input type="text" name="name" placeholder="Enter your name">
-                    <label for="text" class="comment__subtitle">COMMENT</label>
-                    <textarea name="" id="" cols="30" rows="10" wrap="hard" placeholder="Add a new comment"></textarea>
-                    <button type="submit" class="comment__button">COMMENT</button>
+                    <div class="box__comment">
+                        <label for="text" class="comment__subtitle">COMMENT</label>
+                        <textarea name="comment" id="" cols="30" rows="10" wrap="hard" placeholder="Add a new comment" class="box__comment-input" required></textarea>
+                    </div>
+                    <div class="button__section">
+                        <button type="submit" class="comment__button">COMMENT</button>
+                    </div>
                 </form>
             </section>
         </section>
-        <section id="section__comments">
+        <section class="section__comments-container">
+            <div id="section__comments">
+            </div>
         </section>
     </main>
     <footer class="footer__container">

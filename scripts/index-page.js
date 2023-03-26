@@ -17,38 +17,72 @@ const comments = [
 const sectionComments = document.querySelector("#section__comments");
 sectionComments.classList.add("section__comments");
 
-for (let i = 0; i < comments.length; i++) {
-//container for the the names and dates
-const nameDateContainer = document.createElement("div");
-sectionComments.appendChild(nameDateContainer);
-nameDateContainer.classList.add("container__name-date")
+function createCommentCard(comment) {
+    const parentContainer = document.createElement("div");
+    sectionComments.appendChild(parentContainer);
+    parentContainer.classList.add("parent__container");
+    
+    const nameDateCommentContainer = document.createElement("div");
+    parentContainer.appendChild(nameDateCommentContainer);
+    nameDateCommentContainer.classList.add("container__right");
+    
+    const nameDateContainer = document.createElement("div");
+    nameDateCommentContainer.appendChild(nameDateContainer);
+    nameDateContainer.classList.add("container__name-date");
+    
+    const commentContainer = document.createElement("div");
+    nameDateCommentContainer.appendChild(commentContainer);
+    
+    const avatarContainer = document.createElement("div");
+    parentContainer.appendChild(avatarContainer);
+    avatarContainer.classList.add("avatar__container");
+    
+    const commentName = document.createElement("p");
+    commentName.innerHTML = comment.name;
+    nameDateContainer.appendChild(commentName);
+    commentName.classList.add("comment__name");
+    
+    const commentDate = document.createElement("p");
+    commentDate.innerHTML = comment.date;
+    nameDateContainer.appendChild(commentDate);
+    commentDate.classList.add("comment__date");
+    
+    const commentCard = document.createElement("div");
+    commentCard.classList.add("comment__card");
+    sectionComments.appendChild(commentCard);
+    
+    const avatarImage = document.createElement("div");
+    avatarImage.classList.add("comment__avatar");
+    avatarContainer.appendChild(avatarImage);
+    
+    const commentSection = document.createElement("p");
+    commentSection.innerHTML = comment.comment;
+    commentContainer.appendChild(commentSection);
+    commentSection.classList.add("comment__section");
+    }
 
-const commentCard = document.createElement("div");
-commentCard.classList.add("comment__card");
-sectionComments.appendChild(commentCard);
+    function renderCommentSection(comment){
+        sectionComments.innerHTML = "";
+        comments.forEach(comment => {
+            createCommentCard(comment);
+        });
+    }
 
-const commentName = document.createElement("p");
-commentName.innerHTML = comments[i].name;
-nameDateContainer.appendChild(commentName);
+    function submitComments(event){
+        event.preventDefault();
 
-const commentDate = document.createElement("p");
-commentDate.innerHTML = comments[i].date;
-nameDateContainer.appendChild(commentDate);
+        const formSubmit = {
+            name: event.target.name.value,
+            date: new Date().toLocaleDateString("en-US"),
+            comment: event.target.comment.value,
+        };
 
-const avatarContainer = document.createElement("div");
-avatarContainer.classList.add("avatar__container");
-sectionComments.appendChild(avatarContainer);
-//mercury image
+        comments.unshift(formSubmit);
+        renderCommentSection(comments);
+        formEl.reset()
+    }
 
-// const commentContainer = document.createElement("div");
-// sectionComments.appendChild(commentContainer)
+    const inputSubmit = document.querySelector(".comment__form");
 
-
-const commentSection = document.createElement("p");
-commentSection.innerHTML = comments[i].comment;
-sectionComments.appendChild(commentSection);
-
-const divider = document.createElement("hr");
-sectionComments.appendChild(divider);
-
-}
+    inputSubmit.addEventListener("submit", submitComments);
+    renderCommentSection(comments);

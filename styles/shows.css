@@ -220,6 +220,7 @@
   .footer__row {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     padding-right: 1.25rem;
   }
 }

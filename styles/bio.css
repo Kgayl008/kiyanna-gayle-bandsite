@@ -220,6 +220,7 @@
   .footer__row {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     padding-right: 1.25rem;
   }
 }
@@ -460,6 +461,34 @@
   background-color: #FAFAFA;
 }
 
+.section__photo-gallery-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .section__photo-gallery-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding-top: 3rem;
+    padding-bottom: 1.125rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .section__photo-gallery-title {
+    padding-left: 4.6875rem;
+    padding-top: 3rem;
+  }
+}
+
 .comment__title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -470,21 +499,38 @@
   padding-bottom: 1rem;
   padding-right: 1rem;
 }
-.comment__avatar {
-  border-radius: 50%;
-  height: 2.25rem;
-  width: 2.25rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  left: 1rem;
+@media screen and (min-width: 768px) {
+  .comment__title {
+    padding-left: 2.25rem;
+    padding-top: 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .comment__title {
+    padding-left: 5rem;
+  }
 }
 .comment__subtitle {
   color: #AFAFAF;
   font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 1.125rem;
 }
-.comment__section {
+.comment__container {
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .comment__container {
+    padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .comment__container {
+    padding-left: 25rem;
+    padding-right: 22rem;
+  }
 }
 .comment__form {
   width: 73%;
@@ -496,20 +542,168 @@
   color: #FFFFFF;
   height: 2.5rem;
   border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__button {
+    width: 20vw;
+    font-size: 0.75rem;
+  }
 }
 .comment__image {
-  width: 22%;
+  padding: 1rem;
 }
 
-.avatar__container {
-  border-radius: 50%;
-  height: 2.25rem;
-  width: 2.25rem;
-  background-color: #E1E1E1;
+.comment__button:hover {
+  background-color: #000000;
 }
 
 .container__name-date {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.container__right {
+  display: flex;
+  flex-direction: column;
+  width: 74vw;
+}
+
+.parent__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom: #E1E1E1 solid 0.0625rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.comment__avatar {
+  border-radius: 50%;
+  height: 2.25rem;
+  width: 2.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .comment__avatar {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.avatar__container {
   padding-right: 1rem;
+}
+
+.comment__date {
+  color: #E1E1E1;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .comment__date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.section__comments {
+  padding: 1rem;
+}
+
+.comment__section {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .comment__section {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.comment__name {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .comment__name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.box__name {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.box__comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.box__name-input {
+  height: 2.25rem;
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  border: #E1E1E1 solid 0.0625rem;
+}
+
+.box__name-input:focus {
+  border-color: 0.0625rem solid #000000;
+}
+
+.box__name-input:focus {
+  outline: none;
+  border: 0.0625rem solid #000000;
+}
+
+.box__comment-input {
+  height: 12vh;
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  border: #E1E1E1 solid 0.0625rem;
+}
+
+.box__comment-input:focus {
+  outline: none;
+  border: 0.0625rem solid #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .section__comments-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .section__comments-container {
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+}
+
+.button__section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.active {
+  border: #000000 solid 0.0625rem;
 }/*# sourceMappingURL=bio.css.map */
