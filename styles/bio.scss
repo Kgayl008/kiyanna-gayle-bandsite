@@ -242,7 +242,6 @@
     }
     &__container {
         display: flex;
-        // border-bottom: $Mercury solid .0625rem;
         @include tablet{
             padding-left: 5rem;
             @include desktop{
@@ -278,16 +277,17 @@
 .comment__button:hover{
     background-color: $BandSite-DarkBlack;
 }
-.container__name-date{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-}
-.container__right{
+.container{
+    &__name-date{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+    &__right{
     display: flex;
     flex-direction: column;
     width: 74vw;
-}
+}}
 .parent__container{
     display: flex;
     flex-direction: row-reverse;
@@ -296,88 +296,98 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.comment__avatar{
-    border-radius: 50%;
-    height: 2.25rem;
-    width: 2.25rem;
-    object-fit: cover;
-    background-color: $Mercury;
-    @include tablet{
-        height: 3rem;
-        width: 3rem;
-    }
-}
 .avatar__container{
     padding-right: 1rem;
 }
-.comment__date{
-    color: $Mercury;
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    @include tablet{
-        font-size: .875rem;
-        line-height: 1.375rem;
+.comment{
+    &__avatar{
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        object-fit: cover;
+        background-color: $Mercury;
+        @include tablet{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+    &__date{
+        color: $Mercury;
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        @include tablet{
+            font-size: .875rem;
+            line-height: 1.375rem;
+        }
+    }
+    &__section{
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        @include tablet{
+            font-size: .875rem;
+            line-height: 1.375rem;
+        }
+    }
+    &__name{
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        font-weight: 500;
+        @include tablet{
+            font-size: .875rem;
+            line-height: 1.375rem;
+        }
     }
 }
+
 .section__comments{
     padding: 1rem;
 }
-.comment__section{
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    @include tablet{
-        font-size: .875rem;
-        line-height: 1.375rem;
+
+.box{
+    &__name{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
     }
-}
-.comment__name{
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    font-weight: 500;
-    @include tablet{
-        font-size: .875rem;
-        line-height: 1.375rem;
+    &__comment{
+        display: flex;
+        flex-direction: column;
+    }
+    &__name-input{
+        height: 2.25rem;
+        background-color: $Alabaster;
+        border-radius: 0.25rem;
+        padding: .75rem;
+        border: $Mercury solid .0625rem;
     }
 }
 
-.box__name{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-}
-.box__comment{
-    display: flex;
-    flex-direction: column;
-}
-.box__name-input{
-    height: 2.25rem;
-    background-color: $Alabaster;
-    border-radius: 0.25rem;
-    padding: .75rem;
-    border: $Mercury solid .0625rem;
-}
-.box__name-input:focus {
-    border-color: .0625rem solid $BandSite-DarkBlack;
+.box{
+    &__name-input:focus {
+        border-color: .0625rem solid $BandSite-DarkBlack;
     }
-.box__name-input:focus {
-    outline: none;
-    border: .0625rem solid $BandSite-DarkBlack;
+    &__name-input:focus {
+        outline: none;
+        border: .0625rem solid $BandSite-DarkBlack;
     }
-.box__comment-input{
-    height: 12vh;
-    background-color: $Alabaster;
-    border-radius: 0.25rem;
-    padding: .75rem;
-    border: $Mercury solid .0625rem;
 }
-.box__comment-input:focus {
-    outline: none;
-    border: .0625rem solid $BandSite-DarkBlack;
-    }
 
+.box{
+    &__comment-input{
+        height: 12vh;
+        background-color: $Alabaster;
+        border-radius: 0.25rem;
+        padding: .75rem;
+        border: $Mercury solid .0625rem;
+    }
+    &__comment-input:focus {
+    outline: none;
+    border: .0625rem solid $BandSite-DarkBlack;
+    }
+}
 .section__comments-container{
     @include tablet{
         padding-left: 5rem;
@@ -396,6 +406,3 @@
 .active{
     border: $BandSite-DarkBlack solid .0625rem;
 }
-// .box__name-input:focus {
-//     border-color: .0625rem solid $BandSite-DarkBlack;
-//     }
