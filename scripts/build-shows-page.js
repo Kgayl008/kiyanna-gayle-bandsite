@@ -1,35 +1,12 @@
-const showsArray = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    }
-]
+
+let showsArray = [];
+
+axios.get('https://project-1-api.herokuapp.com/showdates/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0')
+    .then(result => {
+        console.log(result);
+        showsArray = (result.data);
+    
+
 const shows = document.querySelector("#shows__section");
 shows.classList.add("shows__section");
 
@@ -73,7 +50,7 @@ for (let i = 0; i < showsArray.length; i++){
     venueTitle.classList.add("shows__venue-title");
 
     const venueContent = document.createElement("p");
-    venueContent.innerHTML = showsArray[i].venue;
+    venueContent.innerHTML = showsArray[i].place;
     venueContainer.appendChild(venueContent);
     venueContent.classList.add("shows__venue-content");
 
@@ -102,10 +79,42 @@ for (let i = 0; i < showsArray.length; i++){
     buyButtonContainer.appendChild(buyTicketButton);
     buyTicketButton.classList.add("shows__button")
 }
+});
 
 
 
 
 
 
-
+// const showsArray = [
+//     {
+//         date: "Mon Sept 06 2021",
+//         venue: "Ronald Lane",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Tue Sept 21 2021",
+//         venue: "Pier 3 East",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Fri Oct 15 2021",
+//         venue: "View Lounge",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Sat Nov 06 2021",
+//         venue: "Hyatt Agency",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Fri Nov 26 2021",
+//         venue: "Moscow Center",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Wed Dec 15 2021",
+//         venue: "Press Club",
+//         location: "San Francisco, CA"
+//     }
+// ]
