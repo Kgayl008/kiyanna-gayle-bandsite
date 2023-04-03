@@ -34,9 +34,14 @@ for (let i = 0; i < showsArray.length; i++){
     dateTitle.classList.add("shows__date-title");
 
     const dateContent = document.createElement("p");
-    dateContent.innerHTML = showsArray[i].date;
-    dateContainer.appendChild(dateContent);
-    dateContent.classList.add("shows__dates");
+dateContent.innerHTML = convertDate(showsArray[i].date);
+dateContainer.appendChild(dateContent);
+dateContent.classList.add("shows__dates");
+
+    // const dateContent = document.createElement("p");
+    // dateContent.innerHTML = showsArray[i].date;
+    // dateContainer.appendChild(dateContent);
+    // dateContent.classList.add("shows__dates");
     
     //heading venue
 
@@ -79,42 +84,15 @@ for (let i = 0; i < showsArray.length; i++){
     buyButtonContainer.appendChild(buyTicketButton);
     buyTicketButton.classList.add("shows__button")
 }
+})
+.catch(error => {
+    console.error(error);
 });
 
 
+function convertDate(timestamp) {
+    const date = new Date(timestamp);
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
 
-
-
-
-// const showsArray = [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Tue Sept 21 2021",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Oct 15 2021",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Sat Nov 06 2021",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Nov 26 2021",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Wed Dec 15 2021",
-//         venue: "Press Club",
-//         location: "San Francisco, CA"
-//     }
-// ]

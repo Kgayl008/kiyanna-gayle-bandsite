@@ -8,10 +8,13 @@ axios.get('https://project-1-api.herokuapp.com/comments/?api_key=0aaf8967-4617-4
         console.log(potato);
         comments = potato.data;
         renderCommentSection(comments);
+        
     })
     .catch(error => {
         console.error(error);
     });
+
+
 
 const sectionComments = document.querySelector("#section__comments");
 sectionComments.classList.add("section__comments");
@@ -42,7 +45,7 @@ function createCommentCard(comment) {
     commentName.classList.add("comment__name");
     
     const commentDate = document.createElement("p");
-    commentDate.innerHTML = comment.timestamp;
+    commentDate.innerHTML = convertDate(comment.timestamp);
     nameDateContainer.appendChild(commentDate);
     commentDate.classList.add("comment__date");
     
@@ -58,7 +61,9 @@ function createCommentCard(comment) {
     commentSection.innerHTML = comment.comment;
     commentContainer.appendChild(commentSection);
     commentSection.classList.add("comment__section");
-    }
+}
+
+
 
 function renderCommentSection(comments){
     sectionComments.innerHTML = "";//reset to get more info
@@ -85,6 +90,28 @@ const inputSubmit = document.querySelector(".comment__form");
 
 inputSubmit.addEventListener("submit", submitComments);
 
-function convertDate(dates){
-    const date = new Date(dates)
+// function convertDate(dates){
+//     const date = new Date(dates)
+// }
+function convertDate(timestamp) {
+    const date = new Date(timestamp);
+    return date.toLocaleDateString();
 }
+
+
+
+
+
+// axios.post('https://project-1-api.herokuapp.com/comments/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0', {
+//         data: {
+//         name: 'John Doe',
+//         comment: 'john.doe@example.com',
+//         timestamp: new Date(1648906200000).toLocaleDateString()
+//         }
+//     })
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
