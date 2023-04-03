@@ -1,19 +1,16 @@
-// const commentsURL = "https://project-1-api.herokuapp.com";
-// const apiKey = "?api_key=0aaf8967-4617-4546-9578-25b998b99ff0";
+const commentsURL = 'https://project-1-api.herokuapp.com/comments/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0';
 
 let comments = [];
 
-axios.get('https://project-1-api.herokuapp.com/comments/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0')
-    .then(potato => {
-        console.log(potato);
-        comments = potato.data;
+axios.get(commentsURL)
+    .then(response => {
+        console.log(response);
+        comments = response.data;
         renderCommentSection(comments);
-        
     })
     .catch(error => {
         console.error(error);
     });
-
 
 
 const sectionComments = document.querySelector("#section__comments");
@@ -90,28 +87,30 @@ const inputSubmit = document.querySelector(".comment__form");
 
 inputSubmit.addEventListener("submit", submitComments);
 
-// function convertDate(dates){
-//     const date = new Date(dates)
-// }
 function convertDate(timestamp) {
     const date = new Date(timestamp);
     return date.toLocaleDateString();
 }
 
+let userComment = {name: n, comment: c}
 
+axios.post(commentsURL, userComment)
+    .then(response =>{
+        console.log(response.data);
+        return response.data;
+    })
+    .then(data =>{
+        axios.get(commentsURL)
+            .then((response) => {
+                console.log(response);
+                comments = (response.data);
 
+                comments.sort((a,b) => b.timestamp - a.timestamp);
 
+                renderCommentSection(comments)
+            })
+            .catch(error => {
+                console.error(error);
+            });
+            })
 
-// axios.post('https://project-1-api.herokuapp.com/comments/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0', {
-//         data: {
-//         name: 'John Doe',
-//         comment: 'john.doe@example.com',
-//         timestamp: new Date(1648906200000).toLocaleDateString()
-//         }
-//     })
-//     .then(response => {
-//         console.log(response.data);
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     });

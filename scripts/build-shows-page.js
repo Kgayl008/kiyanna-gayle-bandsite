@@ -1,7 +1,9 @@
 
+const showsURL = "https://project-1-api.herokuapp.com/showdates/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0";
+
 let showsArray = [];
 
-axios.get('https://project-1-api.herokuapp.com/showdates/?api_key=0aaf8967-4617-4546-9578-25b998b99ff0')
+axios.get(showsURL)
     .then(result => {
         console.log(result);
         showsArray = (result.data);
@@ -34,14 +36,9 @@ for (let i = 0; i < showsArray.length; i++){
     dateTitle.classList.add("shows__date-title");
 
     const dateContent = document.createElement("p");
-dateContent.innerHTML = convertDate(showsArray[i].date);
-dateContainer.appendChild(dateContent);
-dateContent.classList.add("shows__dates");
-
-    // const dateContent = document.createElement("p");
-    // dateContent.innerHTML = showsArray[i].date;
-    // dateContainer.appendChild(dateContent);
-    // dateContent.classList.add("shows__dates");
+    dateContent.innerHTML = convertDate(showsArray[i].date);
+    dateContainer.appendChild(dateContent);
+    dateContent.classList.add("shows__dates");
     
     //heading venue
 
@@ -88,11 +85,8 @@ dateContent.classList.add("shows__dates");
 .catch(error => {
     console.error(error);
 });
-
-
 function convertDate(timestamp) {
     const date = new Date(timestamp);
     const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
-
