@@ -69,28 +69,50 @@ function renderCommentSection(comments){
     });
 }
 
-function submitComments(event){
+function submitComments(event) {
     event.preventDefault();
 
     const formSubmit = {
         name: event.target.name.value,
-        date: new Date().toLocaleDateString("en-US"),
+        timestamp: Date.now(), // Use 'timestamp' and store the current time in milliseconds
         comment: event.target.comment.value,
     };
 
     comments.unshift(formSubmit);
     renderCommentSection(comments);
-    formEl.reset()
+    event.target.reset(); // Reset the form here; `formEl` was undefined
 }
 
 const inputSubmit = document.querySelector(".comment__form");
-
 inputSubmit.addEventListener("submit", submitComments);
 
 function convertDate(timestamp) {
     const date = new Date(timestamp);
-    return date.toLocaleDateString();
+    return !isNaN(date.getTime()) ? date.toLocaleDateString("en-US") : "Invalid Date"; // Check for valid date
 }
+
+// function submitComments(event){
+//     event.preventDefault();
+
+//     const formSubmit = {
+//         name: event.target.name.value,
+//         date: new Date().toLocaleDateString("en-US"),
+//         comment: event.target.comment.value,
+//     };
+
+//     comments.unshift(formSubmit);
+//     renderCommentSection(comments);
+//     formEl.reset()
+// }
+
+// const inputSubmit = document.querySelector(".comment__form");
+
+// inputSubmit.addEventListener("submit", submitComments);
+
+// function convertDate(timestamp) {
+//     const date = new Date(timestamp);
+//     return date.toLocaleDateString();
+// }
 
 let userComment = {name: n, comment: c}
 
